@@ -1,0 +1,729 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  padding: 20px;
+  /*background-color: #f7f7f7;*/
+}
+
+/* Gesamtcontainer-Oberhalb */
+.container-above {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+  /*background-color: #f0f0f0;*/
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Gesamtcontainer-Oberhalb */
+.container-below {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+  /*background-color: #f0f0f0;*/
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.container-newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Rechter Container (40%) */
+.right-container {
+  flex: 40%;
+  padding: 0px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Google Maps Container */
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.container-below-title {
+  width: auto;
+  margin-left: 10%;
+  margin-top: 20px;
+  font-size: 24px;     
+  font-weight: bold;   
+  color: #333; 
+}
+
+
+/* #####################################################################*/
+/* Input-Field */
+
+.material-input {
+  position: relative;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.material-input input {
+  font-size: 16px;
+  padding: 24px 12px 6px 12px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  background-color: #f5f5f5;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.material-input input:hover {
+  background-color: #eaeaea;
+}
+
+.material-input input:focus {
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #388e3c;
+  /*lila: #6200ea, gruen1: #018786, gruen kraeftig: #388e3c, gruen klassisch: #43a047, gruen dunkler: #2e7d32*/
+}
+
+.material-input label {
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  color: #888;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* Label springt nach oben bei Fokus oder wenn was eingegeben wurde */
+.material-input input:focus+label,
+.material-input input:not(:placeholder-shown)+label {
+  top: 2px;
+  font-size: 12px;
+  color: #388e3c;
+  /*lila: #6200ea, gruen1: #018786, gruen kraeftig: #388e3c, gruen klassisch: #43a047, gruen dunkler: #2e7d32*/
+}
+
+.material-input .asterisk {
+  color: red; /* Standardfarbe */
+  margin-left: 4px;
+}
+
+.material-input input:valid + label .asterisk {
+  color: green; /* Wenn das Feld ausgefüllt ist */
+}
+
+.material-input input:invalid + label .asterisk {
+  color: red; /* Wenn das Feld leer oder ungültig ist */
+}
+
+
+/* #####################################################################*/
+/* TextArea */
+
+.material-textarea {
+  position: relative;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.material-textarea textarea {
+  font-size: 16px;
+  padding: 24px 12px 6px 12px;
+  width: 100%;
+  min-height: 120px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  background-color: #f5f5f5;
+  outline: none;
+  resize: vertical;
+  transition: all 0.3s ease;
+  color: #000;
+  font-family: inherit;
+}
+
+.material-textarea textarea:hover {
+  background-color: #eaeaea;
+}
+
+.material-textarea textarea:focus {
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #388e3c;
+}
+
+.material-textarea label {
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  color: #888;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* Label nach oben bewegen, wenn Fokus oder Text drin ist */
+.material-textarea textarea:focus+label,
+.material-textarea textarea:not(:placeholder-shown)+label {
+  top: 2px;
+  font-size: 12px;
+  color: #388e3c;
+}
+
+/* Grunddesign für WebKit-Browser (Chrome, Edge, Safari) */
+.material-textarea textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Die Scrollbar-Schiene (Hintergrund) entfernen */
+.material-textarea textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Der Scrollbalken selbst */
+.material-textarea textarea::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* Hover über Scrollbalken */
+.material-textarea textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Die Pfeile oben/unten deaktivieren oder unsichtbar machen */
+.material-textarea textarea::-webkit-scrollbar-button {
+  height: 6px;
+  background: transparent;
+  display: none;
+  /* Pfeile ausblenden */
+}
+
+.material-textarea .asterisk {
+  color: red; /* Standardfarbe */
+  margin-left: 4px;
+}
+
+.material-textarea textarea:valid + label .asterisk {
+  color: green; /* Wenn das Feld ausgefüllt ist */
+}
+
+.material-textarea textarea:invalid + label .asterisk {
+  color: red; /* Wenn das Feld leer oder ungültig ist */
+}
+
+/*.material-textarea textarea::-webkit-scrollbar-button {
+  display: none;
+}
+
+.material-textarea textarea:active::-webkit-scrollbar-button {
+  display: block;
+  background-color: #aaa;
+}*/
+
+
+/* #####################################################################*/
+/* ComboBox*/
+
+.material-select-custom {
+  position: relative;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+}
+
+.material-select-custom .selected {
+  font-size: 16px;
+  padding: 24px 12px 6px 12px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.material-select-custom .selected:hover {
+  background-color: #eaeaea;
+}
+
+.material-select-custom .selected:focus {
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #388e3c;
+}
+
+/* Label ist IMMER oben */
+.material-select-custom label {
+  position: absolute;
+  left: 12px;
+  top: 2px;
+  font-size: 12px;
+  color: #388e3c;
+  pointer-events: none;
+}
+
+/* Pfeil als einfaches Pseudoelement */
+.material-select-custom .arrow {
+  font-size: 14px;
+  color: #888;
+  margin-left: 10px;
+}
+
+/* Dropdown-Liste */
+.material-select-custom .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Sichtbar bei .open */
+.material-select-custom.open .options {
+  display: block;
+}
+
+/* Optionselemente */
+.material-select-custom .options li {
+  padding: 12px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover-Effekt */
+.material-select-custom .options li:hover {
+  background-color: #388e3c;
+  color: #fff;
+}
+
+/* Scrollbar wie Textarea */
+.material-select-custom .options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.material-select-custom .options::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.material-select-custom .options::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.material-select-custom .options::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.material-select-custom .options::-webkit-scrollbar-button {
+  height: 6px;
+  background: transparent;
+  display: none;
+}
+
+.material-select-custom .selected-input {
+  all: unset;
+  width: 100%;
+  font-size: 16px;
+  color: #000;
+  background-color: transparent;
+  padding: 0;
+}
+
+.material-select-custom .selected-input::placeholder {
+  color: #aaa;
+}
+
+
+/* #####################################################################*/
+/* Anordnung ContactUs */
+
+.form-container {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 60px;
+}
+
+/* Breitenklassen */
+.w10  { width: 10% !important; }
+.w20  { width: 20% !important; }
+.w30  { width: 30% !important; }
+.w40  { width: 40% !important; }
+.w50  { width: 50% !important; }
+.w60  { width: 60% !important; }
+.w70  { width: 70% !important; }
+.w80  { width: 80% !important; }
+.w90  { width: 90% !important; }
+.w100 { width: 100% !important; }
+
+/* #####################################################################*/
+/* Apply Button*/
+
+.material-button {
+  width: auto;
+  margin-left: 80%;
+  margin-top: 12px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-button:hover:not(:disabled) {
+  background-color: #2e7d32;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.material-button:active:not(:disabled) {
+  background-color: #1b5e20;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.material-button:focus-visible:not(:disabled) {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.3);
+}
+
+/* Disabled-Zustand */
+.material-button:disabled {
+  background-color: #c8e6c9;
+  color: #888;
+  cursor: default;
+  box-shadow: none;
+}
+
+
+/* #####################################################################*/
+/* Left-Container*/
+
+.left-container {
+  flex: 60%;
+  /*background-color: #f4f4f4;*/
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+.container-above-title {
+  width: auto;
+  margin-left: 15%;
+  margin-top: 20px;
+  font-size: 24px;     
+  font-weight: bold;   
+  color: #333; 
+}
+
+.container-above-middle {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 16px;
+}
+
+.container-above-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 16px;
+}
+
+.container-location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+}
+
+.location-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.location-text {
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+  padding: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.location-text:hover {
+  text-decoration: underline;
+  color: #66bb6a; /* Normales, verwendetes Grün beim Hover */
+}
+
+.location-text:active {
+  color: #388e3c; /* Dunkleres Grün beim Klicken */
+}
+
+.location-text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.container-phone{
+  display: flex; 
+  align-items: flex-start; 
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.container-email{
+  display: flex; 
+  align-items: center; 
+  gap: 16px; 
+  margin-top: 16px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid black;
+}
+
+.container-phone i,
+.container-email i {
+  font-size: 24px;
+  color: #333;
+}
+
+.phone-text div,
+.email-text {
+  text-align: left;
+  font-size: 16px;
+  color: #444;
+}
+
+.icon-green {
+  color: #4CAF50;
+}
+
+/* #####################################################################*/
+/* Newsletter container */
+
+.container-signUp-title {
+  font-size: 18px;
+  color: #888;
+  font-weight: 200;
+}
+
+.container-signUp-text{
+  font-size: 16px;
+  color: #888;
+  text-align: justify;
+}
+
+.container-signUp-checkBox {
+  margin-top: 10px;
+}
+
+.container-signUp-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.styled-checkbox {
+  width: 22px;
+  height: 22px;
+  accent-color: #4caf50; /* grünes Häkchen bei modernen Browsern */
+  cursor: pointer;
+}
+
+.container-signUp-textAdapted{
+  font-size: 16px;
+  color: #888;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #####################################################################*/
+/* ComboBox - Test*/
+/*
+.material-select {
+  position: relative;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.material-select select {
+  font-size: 16px;
+  padding: 24px 12px 6px 12px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  background-color: #f5f5f5;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+  overflow-y: auto;
+}
+
+.material-select select:hover {
+  background-color: #eaeaea;
+}
+
+.material-select select:focus {
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #388e3c;
+}
+
+.material-select label {
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  color: #888;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.material-select select:focus + label,
+.material-select select:not([value=""]) + label {
+  top: 2px;
+  font-size: 12px;
+  color: #388e3c;
+}
+
+.material-select::after {
+  content: '▼';
+  position: absolute;
+  right: 12px;
+  top: 26px;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+}
+
+.material-select select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.material-select select::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.material-select select::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.material-select select::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.material-select select::-webkit-scrollbar-button {
+  height: 6px;
+  background: transparent;
+  display: none;
+} */

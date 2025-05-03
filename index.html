@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Maps Integration</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <h2>Unsere Standorte</h2>
+  <div class="container">
+    <div class="container-above">
+      <!-- Linker Container (60%) -->
+      <div class="left-container">
+        <div class="container-above-title">
+          <p> YOU CAN REACH US ON </p>
+        </div>
+        <div class="container-above-middle">
+          <div class="container-location">
+            <div class="location-icon">
+              <i class="material-icons icon-green">location_on</i>
+            </div>
+            <div class="location-text" id="HeadOffice">
+              <h3>YFC Rurka Kalan Head Office</h3>
+              Youth & Sports Complex<br />
+              Goraya Road<br />
+              VPO Rurka Kalan<br />
+              Distt. Jalandhar<br />
+              Punjab - 144031
+            </div>
+          </div>
+
+          <div class="container-location">
+            <div class="location-icon">
+              <i class="material-icons icon-green">location_on</i>
+            </div>
+            <div class="location-text" id="NewComplex">
+              <h3>GACC YFC Rurka Kalan NEW COMPLEX</h3>
+              New YFC Complex<br />
+              Pasla Road<br />
+              VPO Rurka Kalan<br />
+              Distt. Jalandhar<br />
+              Punjab - 144031
+            </div>
+          </div>
+        </div>
+        <div class="container-above-bottom">
+          <div class="container-phone">
+            <i class="material-icons icon-green">phone</i>
+            <div class="phone-text">
+              <div>+91 8264851416</div>
+              <div>+91 1826 271489</div>
+            </div>
+          </div>
+          <div class="container-email">
+            <!-- email content --><i class="material-icons">email</i>
+            <div class="email-text">
+              info@yfcrurkakalan.org
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rechter Container (40%) -->
+      <div class="right-container">
+        <!-- Google Map -->
+        <iframe id="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.888274008146!2d13.40495431579889!3d52.520006179811556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c285e2efef%3A0x2e1b8e48ebf46b45!2sBerlin!5e0!3m2!1sde!2sde!4v1618297394051!5m2!1sde!2sde"
+          allowfullscreen="" loading="lazy"></iframe>
+
+        <!-- Button zum Wechseln zu München -->
+        <!-- <button onclick="goToMunich()">Nach München wechseln</button> -->
+      </div>
+    </div>
+    <div class="container-below">
+      <div class="container-below-title">
+        <p> Fill out the form below to get in touch </p>
+      </div>
+      <div class="form-container">
+        <div class="row">
+          <div class="material-input w50">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Surname <span class="asterisk">*</span> </label>
+          </div>
+          <div class="material-input w50">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Last Name <span class="asterisk">*</span></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="material-input w50">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">City/Village <span class="asterisk">*</span></label>
+          </div>
+          <div class="material-input w50">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">State <span class="asterisk">*</span></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="material-input w50">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Country <span class="asterisk">*</span></label>
+          </div>
+          <div class="material-input w50">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Email-Address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="material-input w100">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Street Address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="material-select-custom w20">
+            <!-- Sichtbarer Auswahlbereich -->
+            <div class="selected" tabindex="0">
+              <input type="text" class="selected-input" value="IN +91" />
+              <!--<span class="selected-text">IN +91</span>-->
+              <span class="arrow">▼</span>
+            </div>
+            <!-- Option Liste -->
+            <ul class="options">
+              <li value="AW +297">AW +297</li>
+              <li value="AO +244">AO +244</li>
+              <li value="AF +93">AF +93</li>
+              <li value="AI +1">AI +1</li>
+              <li value="AX +358">AX +358</li>
+              <li value="AL +355">AL +355</li>
+              <li value="AD +376">AD +376</li>
+              <li value="IN +91">IN +91</li>
+              <li value="AE +971">AE +971</li>
+              <li value="AR +54">AR +54</li>
+              <li value="AM +374">AM +374"</li>
+            </ul>
+            <!-- Label im Material-Stil -->
+            <label for="dummy">Choose Country Code </label>
+          </div>
+          <div class="material-input w80">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Phone Number</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="material-textarea">
+            <textarea id="message" placeholder=" " required></textarea>
+            <label for="message">Your message <span class="asterisk">*</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button class="material-button" id="buttonApplication" disabled>Apply</button>
+      </div>
+    </div>
+    <div class="container-newsletter">
+      <div clas="container-signUp">
+        <p class="container-signUp-title">Sign up for our newsletter</p>
+        <div class="container-signUp-text">
+          Our newsletter informs you by email about news and events from YFC Rurka Kalan. You can unsubscribe from the
+          newsletter at any time or withdraw your consent at any time by sending an e-mail to info@yfcrurkakalan.org. By
+          entering the data, you consent to the data processing. The newsletter is sent in accordance with our Privacy
+          Policy to promote our own work and services.
+        </div>
+        <div class="container-signUp-checkBox">
+          <label class="container-signUp-label">
+            <input type="checkbox" class="styled-checkbox" id="checkBoxNewsletter"/>
+            <div class="container-signUp-text">I want to sign up for your newsletter</div>
+          </label>
+        </div>
+      </div>
+      <div clas="container-dataPrivacyStatement">
+        <p class="container-signUp-title">Data privacy statement</p>
+        <div class="container-signUp-text">
+          I agree that my personal data entered in the contact form may be used to answer my inquiry. This also includes
+          the transfer of the data to other organizations within the YFC Rurka Kalan organization for the purpose of answering my request.
+          Furthermore, I agree that the personal data from my enquiry may also be transferred to companies of the
+          HENSOLDT Group outside the EU (see list below) to process my request. My personal data will not be stored and
+          used for other purposes.
+        </div>
+        <div class="container-signUp-checkBox">
+          <label class="container-signUp-label">
+            <input type="checkbox" class="styled-checkbox" id="checkBoxDataPrivacyStatement"/>
+            <div class="container-signUp-text">I agree to the data privacy statement <span class="asterisk">*</span></div>
+          </label>
+        </div>
+        <div class="container-signUp-textAdapted">
+          By checking this box, you agree to our data privacy statement and understand that with this form we collect your contact information, in order to correspond with you.
+        </div>
+        <div class="button-wrapper">
+          <button class="material-button" id="buttonNewsletter" disabled>Apply</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
