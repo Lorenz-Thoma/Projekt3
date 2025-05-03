@@ -11,7 +11,7 @@
 /* Gesamtcontainer-Oberhalb */
 .container-above {
   display: flex;
-  width: 1000px;
+  width: 950px;
   height: 600px;
   margin: 0 auto;
   /*background-color: #f0f0f0;*/
@@ -24,7 +24,7 @@
 .container-below {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 950px;
   height: 800px;
   margin: 0 auto;
   /*background-color: #f0f0f0;*/
@@ -36,7 +36,7 @@
 .container-newsletter {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 950px;
   margin: 0 auto;
   overflow: hidden;
 }
